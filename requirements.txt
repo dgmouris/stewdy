@@ -1,2 +1,12 @@
+Django==1.7.2
+Markdown==2.6.4
 argparse==1.2.1
+django-allauth==0.24.1
+django-filter==0.11.0
+djangorestframework==3.3.1
+oauthlib==1.0.3
+python-openid==2.2.5
+requests==2.8.1
+requests-oauthlib==0.5.0
+stripe==1.27.1
 wsgiref==0.1.2
