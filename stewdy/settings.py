@@ -37,11 +37,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'stripe', 
+    'stripe',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'home',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -62,7 +63,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
     "django.core.context_processors.static",
-    "django.core.context_processors.tz",
+    "django.core.context_processors
+    'django.contrib.sessions.middleware.SessionMiddlewa.tz",
     "django.contrib.messages.context_processors.messages",
     "django.core.context_processors.request",
     #"allauth.account.context_processors.account",
@@ -109,6 +111,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 #django all auth settings configurations
 SITE_ID = 1
