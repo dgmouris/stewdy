@@ -63,13 +63,12 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
     "django.core.context_processors.static",
-    "django.core.context_processors
-    'django.contrib.sessions.middleware.SessionMiddlewa.tz",
+    "django.core.context_processors.tz",
     "django.contrib.messages.context_processors.messages",
     "django.core.context_processors.request",
+)
     #"allauth.account.context_processors.account",
     #"allauth.socialaccount.context_processors.socialaccount",
-)
 
 ROOT_URLCONF = 'stewdy.urls'
 
@@ -110,6 +109,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
+#STATICFILES_DIRS= (os.path.join('static'), )
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
