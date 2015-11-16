@@ -25,7 +25,7 @@ path = '/home/dgmouris/stewdy'
 if path not in sys.path:
     sys.path.append(path)
 #
-os.environ['DJANGO_SETTINGS_MODULE'] = 'stewdy.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'stewdy.settings.production'
 #
 ## then, for django >=1.5:
 from django.core.wsgi import get_wsgi_application

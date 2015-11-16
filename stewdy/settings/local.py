@@ -1,5 +1,7 @@
 #this is going to be the local settings.
 
+#if there are erros you can do this.
+#export PYTHONPATH=$PYTHONPATH:$PWD
 from .base import *
 
 
