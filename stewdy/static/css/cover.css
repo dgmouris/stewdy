@@ -28,7 +28,7 @@ html,
 body {
   height: 100%;
   /* this is the way to add stuff to the background.*/
-  background:  url('/static/img/books.jpg') no-repeat center center fixed; 
+  background:  url('static/img/books.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
