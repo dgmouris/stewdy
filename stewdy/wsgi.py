@@ -21,11 +21,11 @@ import sys
 #
 ## assuming your django settings file is at '/home/dgmouris/mysite/mysite/settings.py'
 ## and your manage.py is is at '/home/dgmouris/mysite/manage.py'
-'''
+
 path = '/home/daniel/stewdy'
 if path not in sys.path:
     sys.path.append(path)
-'''
+
 #
 os.environ['DJANGO_SETTINGS_MODULE'] = 'stewdy.settings.production'
 #

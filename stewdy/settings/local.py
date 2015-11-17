@@ -4,7 +4,7 @@
 #export PYTHONPATH=$PYTHONPATH:$PWD
 from .base import *
 DEBUG = True
-
+ALLOWED_HOSTS += 'localhost'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 

@@ -25,7 +25,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ 'webapp-144786.pythonanywhere.com','stewdy.com']
 
 
 # Application definition
