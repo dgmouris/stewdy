@@ -3,7 +3,7 @@
 #if there are erros you can do this.
 #export PYTHONPATH=$PYTHONPATH:$PWD
 from .base import *
-
+DEBUG = True
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
