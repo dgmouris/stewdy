@@ -43,8 +43,11 @@ INSTALLED_APPS = (
     'allauth.account',
     'allauth.socialaccount',
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth', #rest-auth for authentication
+    'rest_auth.registration',
     'home',
-    'tutor_profiles',
+    'reviews',
 )
 
 MIDDLEWARE_CLASSES = (
