@@ -2,14 +2,16 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'stewdy.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
+    # basically the home page
+	url(r'^$',include('home.urls')),
+    
     url(r'^admin/', include(admin.site.urls)),
+    # allauth, which is the authentication framework
     url(r'^accounts/', include('allauth.urls')),
+    # api for all of the allauth
     url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
-    url(r'^$',include('home.urls')),
+   	#this includes the review api as well as pages.
+    url(r'^reviews/',include('reviews.urls')),
 )
 
