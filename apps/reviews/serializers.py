@@ -28,3 +28,4 @@ class ListTutorProfileSerializer(serializers.Serializer):
 	class Meta:
 		model = TutorProfile
 		fields = ('rating', 'specialization', 'bio','user')
+
