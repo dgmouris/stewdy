@@ -10,6 +10,7 @@ urlpatterns = patterns('',
  	url(r'^api/v1/tutor/$', views.TutorProfileList.as_view(), name='students'),
     url(r'^api/v1/student/(?P<slug>[\w-]+)/$', views.StudentProfileDetail.as_view(), name='detail'),
     url(r'^api/v1/tutor/(?P<slug>[\w-]+)/$', views.TutorProfileDetail.as_view(), name='detail'),
+    url(r'^api/v1/tutor/(?P<slug>[\w-]+)/reviews$', views.TutorReviewsList.as_view(), name='detail'),
 
 )
 
