@@ -6,6 +6,7 @@ from django.utils.text import slugify
 from django.db.models.fields import SlugField
 # Create your models here.
 
+
 class TutorProfile(models.Model):
 	user = models.OneToOneField(User)
 	education = models.CharField(max_length=200,null=True, blank=True)
