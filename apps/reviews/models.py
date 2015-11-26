@@ -49,10 +49,3 @@ class TutorReviews(models.Model):
 	def __unicode__(self):
 		return self.review
 
-#signal to create the slug
-def create_slug(sender, instance, **kwargs):
-     instance.slug = slugify(instance.user.username)
-     instance.save()
-
-#post_save.connect(create_slug, sender=StudentProfile, dispatch_uid="update_slug")
-#post_save.connect(create_slug, sender=TutorProfile, dispatch_uid="update_slug")
