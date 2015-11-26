@@ -8,33 +8,23 @@ from django.db.models.signals import post_save
 # Create your models here.
 
 class TutorProfile(models.Model):
+	#please note the signal to create the slug.
 	user = models.OneToOneField(User)
 	education = models.CharField(max_length=200,null=True, blank=True)
 	rating = models.FloatField(null=True,  blank=True)
 	specialization = models.TextField(null=True,blank=True)
 	bio = models.TextField(null=True,blank=True)
-	slug = SlugField(max_length=40, null=True, blank=True)
-	#,editable=False
-	'''
-	def save(self):
-		super(TutorProfile, self).save()
-		self.slug = slugify(self.user.username)
-		super(TutorProfile, self).save()
-	'''
+	slug = SlugField(max_length=40,editable=False, null=True, blank=True)
+	
 	def __unicode__(self):
 		return self.user.username
 
 class StudentProfile(models.Model):
+	#please note the signal to create the slug.
 	user = models.OneToOneField(User)
 	education = models.CharField(max_length=200,null=True, blank=True)
-	slug = SlugField(max_length=40,null=True, blank=True)
-	#,editable=False
-	'''
-	def save(self):
-		#super(StudentProfile, self).save()
-		self.slug = slugify(self.user.username)
-		super(StudentProfile, self).save()
-	'''
+	slug = SlugField(max_length=40,editable=False,null=True, blank=True)
+
 	def __unicode__(self):
 		return self.user.username
 
