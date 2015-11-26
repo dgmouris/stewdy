@@ -29,7 +29,7 @@ class TutorProfileSerializer(serializers.Serializer):
 
 	class Meta:
 		model = TutorProfile
-		fields = ('rating', 'specialization', 'bio','user')
+		fields = ('rating','education','specialization','bio','user')
 
 
 
@@ -62,12 +62,21 @@ class ReviewCreateSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
 		model = TutorReviews
 		fields = ('tutor','student','rating','review')
-		#depth = 2
-
 	
 class ReviewSerializer(serializers.ModelSerializer):
 	
 	class Meta:
 		model = TutorReviews
 		fields = ('tutor','student','rating','review')
-		#depth = 1
+
+class TutorProfileCreateSerializer(serializers.ModelSerializer):
+	
+	class Meta:
+		model = TutorProfile
+		fields = ('rating','education','specialization','bio','user')
+
+class StudentProfileCreateSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = StudentProfile
+		fields = ('education','user')

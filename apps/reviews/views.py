@@ -19,9 +19,9 @@ from .serializers import UserSerializer
 from .serializers import StudentProfileSerializer
 from .serializers import TutorProfileSerializer
 from .serializers import ReviewListSerializer
-from .serializers import ReviewCreateSerializer
+from .serializers import TutorProfileCreateSerializer
 from .serializers import ReviewSerializer
-
+from .serializers import StudentProfileCreateSerializer
 from .models import TutorProfile,StudentProfile,TutorReviews
 
 
@@ -60,6 +60,30 @@ class StudentProfileDetail(APIView):
 			many=False)
 		return Response(serializer.data)
 
+class StudentProfileCreate(APIView):
+	def get_user(self,username):
+		try:
+			user = User.objects.get(username=username)
+			return user.id
+		except ObjectDoesNotExist:
+			raise Http404
+
+	def post(self,request,format=None):
+		data = request.data.copy()
+		data = data.dict()
+		print request.user.username
+		user_id = self.get_user(username=request.user.username)
+		data['user'] = user_id
+		print data
+		serializer = StudentProfileCreateSerializer(data=data)
+		print "is it valid"
+		print serializer.is_valid()
+		if serializer.is_valid():
+			serializer.save()
+			return Response(serializer.data,status=status.HTTP_201_CREATED)
+		return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
+
+
 class TutorProfileDetail(APIView):
 	def get_profile(self,slug):
 		try:
@@ -74,13 +98,35 @@ class TutorProfileDetail(APIView):
 			many=False)
 		return Response(serializer.data) 	
 
+class TutorProfileCreate(APIView):
+	def get_user(self,username):
+		try:
+			user = User.objects.get(username=username)
+			return user.id
+		except ObjectDoesNotExist:
+			raise Http404
+
+	def post(self,request,format=None):
+		data = request.data.copy()
+		data = data.dict()
+		print request.user.username
+		user_id = self.get_user(username=request.user.username)
+		data['user'] = user_id
+		print data
+		serializer = TutorProfileCreateSerializer(data=data)
+		print "is it valid"
+		print serializer.is_valid()
+		if serializer.is_valid():
+			serializer.save()			
+			return Response(serializer.data,status=status.HTTP_201_CREATED)
+		return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
+
+	
 
 class TutorReviewsList(APIView):
 	def get_reviews(self,slug):
 		try:
-			tutor = TutorProfile.objects.all().get(slug=slug)
 			return TutorReviews.objects.all().filter(tutor=tutor)
-
 		except ObjectDoesNotExist:
 			raise Http404
 

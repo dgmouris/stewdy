@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('education', models.CharField(max_length=200, null=True, blank=True)),
-                ('slug', models.SlugField(max_length=40, editable=False, blank=True)),
+                ('slug', models.SlugField(max_length=40, null=True, blank=True)),
                 ('user', models.OneToOneField(to=settings.AUTH_USER_MODEL)),
             ],
             options={
@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
                 ('rating', models.FloatField(null=True, blank=True)),
                 ('specialization', models.TextField(null=True, blank=True)),
                 ('bio', models.TextField(null=True, blank=True)),
-                ('slug', models.SlugField(max_length=40, editable=False, blank=True)),
+                ('slug', models.SlugField(max_length=40, null=True, blank=True)),
                 ('user', models.OneToOneField(to=settings.AUTH_USER_MODEL)),
             ],
             options={
@@ -46,8 +46,8 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('rating', models.FloatField(null=True, blank=True)),
                 ('review', models.TextField(null=True, blank=True)),
-                ('created', models.DateTimeField(default=datetime.datetime(2015, 11, 24, 22, 24, 55, 68344), auto_now_add=True)),
-                ('updated', models.DateTimeField(default=datetime.datetime(2015, 11, 24, 22, 24, 55, 68384), auto_now=True)),
+                ('created', models.DateTimeField(default=datetime.datetime(2015, 11, 25, 23, 15, 26, 65624), auto_now_add=True)),
+                ('updated', models.DateTimeField(default=datetime.datetime(2015, 11, 25, 23, 15, 26, 65752), auto_now=True)),
                 ('student', models.ForeignKey(to='reviews.StudentProfile')),
                 ('tutor', models.ForeignKey(to='reviews.TutorProfile')),
             ],
