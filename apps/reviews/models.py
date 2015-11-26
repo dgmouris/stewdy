@@ -16,6 +16,12 @@ class TutorProfile(models.Model):
 	bio = models.TextField(null=True,blank=True)
 	slug = SlugField(max_length=40,editable=False, null=True, blank=True)
 	
+	def save(self, *args, **kwargs):
+		self.slug = slugify(self.user.username)
+		super(TutorProfile, self).save(*args, **kwargs)
+
+
+
 	def __unicode__(self):
 		return self.user.username
 
@@ -24,6 +30,10 @@ class StudentProfile(models.Model):
 	user = models.OneToOneField(User)
 	education = models.CharField(max_length=200,null=True, blank=True)
 	slug = SlugField(max_length=40,editable=False,null=True, blank=True)
+
+	def save(self, *args, **kwargs):
+		self.slug = slugify(self.user.username)
+		super(StudentProfile, self).save(*args, **kwargs)
 
 	def __unicode__(self):
 		return self.user.username
@@ -44,5 +54,5 @@ def create_slug(sender, instance, **kwargs):
      instance.slug = slugify(instance.user.username)
      instance.save()
 
-post_save.connect(create_slug, sender=StudentProfile, dispatch_uid="update_slug")
-post_save.connect(create_slug, sender=TutorProfile, dispatch_uid="update_slug")
+#post_save.connect(create_slug, sender=StudentProfile, dispatch_uid="update_slug")
+#post_save.connect(create_slug, sender=TutorProfile, dispatch_uid="update_slug")
