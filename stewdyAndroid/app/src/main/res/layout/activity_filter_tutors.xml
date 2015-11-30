@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="SUBJECT"
+        android:layout_marginBottom="10dp"
+        />
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/subject_spinner"
+        android:textSize="25pt"
+        android:layout_gravity="center_horizontal"
+        android:entries="@array/subject_array"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="SUBJECT AREA"
+        android:layout_marginBottom="10dp"
+        />
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/area_spinner"
+        android:layout_gravity="center_horizontal"
+        android:textSize="30dp"
+        android:entries="@array/area_array"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="EDUCATION LEVEL"
+        android:layout_marginBottom="10dp"
+        />
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edu_spinner"
+        android:layout_gravity="center_horizontal"
+        android:entries="@array/edu_array"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Location Preferences"
+        android:layout_marginBottom="10dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+            <RadioButton android:id="@+id/radio_gps"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Use GPS location"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/radio_postal"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:text="Use Postal/Zip Code:"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/postal"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/bShowTutors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find Nearby Tutors"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        />
+
+
+</LinearLayout>

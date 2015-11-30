@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Stewdy</string>
+
+    <string name="auth_error">Authentication Error.</string>
+
+    <string name="about_text">This is where we talk about how the app works and some corny stuff about philosophy of learning</string>
+
+    <string name="about_button">About Stewdy</string>
+    <string name="browse_button">Browse tutors near you</string>
+    <string name="login_button">Sign in</string>
+    <string name="student_register_button">Register student</string>
+    <string name="tutor_register_button">Register tutor</string>
+
+    <string name="username_label">Username</string>
+    <string name="password_label">Password</string>
+
+    <string name="student_registration">Student Registration</string>
+    <string name="new_username_label">New username</string>
+    <string name="email_label">Enter email address</string>
+    <string name="tutors_list_label">Tutors near you</string>
+    
+    <string-array name="subject_array">
+        <item>Show All</item>
+        <item>Math</item>
+        <item>Biology</item>
+        <item>Chemistry</item>
+        <item>Physics</item>
+        <item>Economics</item>
+        <item>History</item>
+    </string-array>
+
+    <string-array name="area_array">
+        <item>Show All</item>
+        <item>Calculus</item>
+        <item>Linear Algebra</item>
+        <item>Applied Mathematics</item>
+        <item>Statistics</item>
+    </string-array>
+
+    <string-array name="edu_array">
+        <item>Show All</item>
+        <item>Elementary</item>
+        <item>Junior High</item>
+        <item>High School</item>
+        <item>100-Level Post-Secondary</item>
+        <item>200-Level Post-Secondary</item>
+        <item>300-Level Post-Secondary</item>
+        <item>400-Level Post-Secondary</item>
+        <item>Graduate Level</item>
+    </string-array>
+
+</resources>
