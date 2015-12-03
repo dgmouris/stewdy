@@ -32,17 +32,15 @@
         </activity>
 
         <activity
-            android:name=".ListTutors">
-        </activity>
-
-        <activity
             android:name=".RegisterStudent" >
         </activity>
 
         <activity
             android:name=".RegisterTutor" >
         </activity>
-
+        <activity
+            android:name=".CreateTutorList" >
+        </activity>
         <activity
             android:name=".TutorHome" >
         </activity>

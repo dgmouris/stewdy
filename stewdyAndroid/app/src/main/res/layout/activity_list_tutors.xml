@@ -5,6 +5,12 @@
     android:layout_height="match_parent"
     android:padding="10dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:id="@+id/TextOutput"/>
+
         <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

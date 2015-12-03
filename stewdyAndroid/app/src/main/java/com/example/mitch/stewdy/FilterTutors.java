@@ -60,8 +60,8 @@ public class FilterTutors extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v){
-        Intent about = new Intent(this, ListTutors.class);
-        startActivity(about);
+        Intent List = new Intent(this, CreateTutorList.class);
+        startActivity(List);
 
     }
 

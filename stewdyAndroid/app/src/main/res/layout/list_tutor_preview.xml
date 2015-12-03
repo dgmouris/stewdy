@@ -1,63 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/test_face1" >
-        </ImageView>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/test_face1" >
+    </ImageView>
 
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/logo"
-            android:layout_alignParentTop="true"
-            android:text="John Doe"
-            android:textSize="20sp"
-            android:paddingRight="20dp">
-        </TextView>
-        <TextView
-            android:id="@+id/rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignBottom="@+id/name"
-            android:text="Rating: "
-            android:textSize="12sp" >
-        </TextView>
-        <TextView
-            android:id="@+id/education"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/logo"
-            android:layout_below="@+id/name"
-            android:text="Education: "
-            android:textSize="12sp" >
-        </TextView>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/logo"
+        android:layout_alignParentTop="true"
+        android:text="John Doe"
+        android:maxLines="1"
+        android:textSize="17sp"
+        android:paddingRight="20dp"
+        android:textStyle="bold">
+    </TextView>
 
-        <TextView
-            android:id="@+id/specialization"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/logo"
-            android:layout_below="@+id/education"
-            android:text="Specialization: "
-            android:textSize="12sp" >
-        </TextView>
-        <TextView
-            android:id="@+id/bio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/logo"
-            android:layout_below="@+id/specialization"
-            android:text="Bio: "
-            android:textSize="12sp" >
-        </TextView>
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/logo"
+        android:layout_below="@+id/name"
+        android:maxLines="1"
+        android:textSize="15sp"
+        android:textStyle="bold">
+    </TextView>
+
+    <TextView
+        android:id="@+id/education_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/logo"
+        android:layout_below="@+id/username"
+        android:text="Education: "
+        android:textSize="12sp"
+        android:textStyle="bold">
+    </TextView>
+    <TextView
+        android:id="@+id/education"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/education_label"
+        android:layout_below="@+id/username"
+        android:textSize="12sp"
+        android:maxLines="1"
+        android:paddingRight="15dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/specialization_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/logo"
+        android:layout_below="@+id/education_label"
+        android:text="Specialization: "
+        android:textSize="12sp"
+        android:textStyle="bold">
+    </TextView>
+    <TextView
+        android:id="@+id/specialization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/specialization_label"
+        android:layout_below="@+id/education_label"
+        android:maxLines="2"
+        android:textSize="12sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/bio_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/logo"
+        android:layout_marginLeft="5dp"
+        android:text="Bio: "
+        android:textSize="12sp"
+        android:textStyle="bold">
+    </TextView>
+    <TextView
+        android:id="@+id/bio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/bio_label"
+        android:layout_below="@+id/logo"
+        android:textSize="12sp"
+        android:maxLines="3">
+    </TextView>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/ratingBarStyleSmall"
+        android:numStars="5"
+        android:stepSize="0.25"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:rating="5.0"
+        />
+    <TextView
+        android:id="@+id/numRatings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(# of reviews)"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ratingBar"
+        android:textSize="12sp"
+        android:maxLines="3">
+    </TextView>
+
 </RelativeLayout>
